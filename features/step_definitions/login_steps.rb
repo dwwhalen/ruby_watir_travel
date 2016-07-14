@@ -1,6 +1,3 @@
-
-
-
 Given(/^I login with id "([^"]*)" and password "([^"]*)"$/) do |id, password|
   @browser = Watir::Browser.new
   @login_page = LoginPage.new @browser
