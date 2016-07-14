@@ -1,4 +1,8 @@
-class BasePage
+class CommonPage
+
+  include PageObject
+  include DataMagic
+  include RSpec::Matchers
 
   def initialize(the_browser)
     # @browser = Watir::Browser.new :firefox if @browser.nil?

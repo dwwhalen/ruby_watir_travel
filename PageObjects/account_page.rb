@@ -1,5 +1,5 @@
 
-class AccountPage < BasePage
+class AccountPage < CommonPage
 
   # def go_to_login
   #   @browser.button(:value => 'Login »').click

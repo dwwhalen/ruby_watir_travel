@@ -1,10 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    allure-cucumber (0.5.5)
+      allure-ruby-adaptor-api
+      cucumber (>= 2.0.0)
+    allure-ruby-adaptor-api (0.6.10)
+      mimemagic
+      nokogiri (~> 1.6.0)
+      uuid
     builder (3.2.2)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
-    colorize (0.8.1)
     cucumber (2.4.0)
       builder (>= 2.1.2)
       cucumber-core (~> 1.5.0)
@@ -16,33 +22,74 @@ GEM
     cucumber-core (1.5.0)
       gherkin (~> 4.0)
     cucumber-wire (0.0.1)
+    data_magic (0.22)
+      faker (>= 1.1.2)
+      yml_reader (>= 0.6)
     diff-lcs (1.2.5)
+    faker (1.6.5)
+      i18n (~> 0.5)
     ffi (1.9.11-x86-mingw32)
     gherkin (4.0.0)
-    minitest (5.9.0)
+    httpclient (2.8.0)
+    i18n (0.7.0)
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
+    mimemagic (0.3.1)
+    mini_portile2 (2.1.0)
     multi_json (1.12.1)
     multi_test (0.1.2)
+    nokogiri (1.6.8-x86-mingw32)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    page-object (1.2.0)
+      page_navigation (>= 0.9)
+      selenium-webdriver (>= 2.44.0)
+      watir-webdriver (>= 0.6.11)
+    page_navigation (0.9)
+      data_magic (>= 0.14)
+    parallel (1.9.0)
+    parallel_cucumber (0.1.22)
+      cucumber (~> 2)
+      parallel (~> 1.6)
+    pkg-config (1.1.7)
+    pusher (1.1.0)
+      httpclient (~> 2.7)
+      multi_json (~> 1.0)
+      pusher-signature (~> 0.1.8)
+    pusher-signature (0.1.8)
     require_all (1.2.1)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
     rubyzip (1.2.0)
     selenium-webdriver (2.53.4)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
-    test-unit (2.5.5)
+    syntax (1.2.1)
+    systemu (2.6.5)
+    uuid (2.3.8)
+      macaddr (~> 1.0)
     watir-webdriver (0.9.1)
       selenium-webdriver (>= 2.46.2)
     websocket (1.2.3)
+    yml_reader (0.7)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  colorize
-  cucumber
-  minitest
+  allure-cucumber
+  cucumber (~> 2.0)
+  data_magic (~> 0.22)
+  page-object (~> 1.1, >= 1.1.1)
+  parallel_cucumber
+  pusher
   require_all
-  test-unit (= 2.5.5)
-  watir-webdriver
+  rspec-expectations
+  syntax (~> 1.2)
+  watir-webdriver (~> 0.9.1)
 
 BUNDLED WITH
    1.13.0.rc.1
