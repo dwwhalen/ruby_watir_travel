@@ -9,11 +9,15 @@ class LoginPage < CommonPage
   # end
 
   def username_text_box
-    @browser.text_field(:name => 'username')
+    @browser.text_field(:name, 'username')
   end
 
   def password_text_box
-    @browser.text_field(:name => 'password')
+    @browser.text_field(:name, 'password')
+  end
+
+  def remember_me_check_box
+    @browser.checkbox(:name, 'remember')
   end
 
   def login_button
@@ -24,9 +28,14 @@ class LoginPage < CommonPage
     login_button.wait_until_present(30)
   end
 
-  def login id, password
+  def login id, password, remember_me
     username_text_box.when_present.set id
     password_text_box.when_present.set password
+    if remember_me.downcase == 'checked'
+      remember_me_check_box.when_present.set
+    else
+      remember_me_check_box.when_present.clear
+    end
     login_button.when_present.click
 
     AccountPage.new @browser
