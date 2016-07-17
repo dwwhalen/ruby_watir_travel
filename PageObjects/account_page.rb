@@ -25,6 +25,7 @@ class AccountPage < CommonPage
   end
 
   def choose_to_logout
+    #test
     user_dropdown.when_present.click
     logout_link.when_present.click
     LoginPage.new @browser
