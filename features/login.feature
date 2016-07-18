@@ -22,4 +22,4 @@ Feature: Login
     And the Account page is displayed
     When I close the browser
     And I navigate to the Login page
-    Then the Account page is displayed
+    Then the Login page is displayed
