@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'watir-webdriver', '~> 0.9.1'
+gem 'watir-webdriver'
 gem 'data_magic', '~> 0.22'
 gem 'page-object', '~> 1.1', '>= 1.1.1'
 gem 'cucumber', '~> 2.0'

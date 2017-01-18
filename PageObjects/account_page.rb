@@ -13,11 +13,11 @@ class AccountPage < CommonPage
   end
 
   def user_dropdown
-    @browser.link(:class, "show-submenu")
+    @browser.li(:class, 'pull-right width_change')
   end
 
   def logout_link
-    @browser.link(:text, "Logout")
+    @browser.link(:text, 'Logout')
   end
 
   def wait_until_page_loaded
