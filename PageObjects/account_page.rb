@@ -21,13 +21,13 @@ class AccountPage < CommonPage
   end
 
   def wait_until_page_loaded
-    bookings_div.wait_until_present(30)
+    bookings_div.wait_until_present
   end
 
   def choose_to_logout
 #test
-    user_dropdown.when_present.click
-    logout_link.when_present.click
+    user_dropdown.wait_until_present.click
+    logout_link.wait_until_present.click
     LoginPage.new @browser
   end
 

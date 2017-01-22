@@ -25,18 +25,18 @@ class LoginPage < CommonPage
   end
 
   def wait_until_page_loaded
-    login_button.wait_until_present(30)
+    login_button.wait_until_present
   end
 
   def login id, password, remember_me
-    username_text_box.when_present.set id
-    password_text_box.when_present.set password
+    username_text_box.wait_until_present.set id
+    password_text_box.wait_until_present.set password
     if remember_me.downcase == 'checked'
-      remember_me_check_box.when_present.set
+      remember_me_check_box.wait_until_present.set
     else
-      remember_me_check_box.when_present.clear
+      remember_me_check_box.wait_until_present.clear
     end
-    login_button.when_present.click
+    login_button.wait_until_present.click
 
     AccountPage.new @browser
   end

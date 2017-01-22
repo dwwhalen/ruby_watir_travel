@@ -3,7 +3,7 @@
 Given(/^I navigate to the Login page$/) do
   @browser = Watir::Browser.new :chrome
   @login_page = LoginPage.new @browser
-  @login_page.visit('http://phptravels.net/login')
+  @login_page.visit('http://phptravels.net/login/en')
 end
 
 Given(/^I login with id "([^"]*)" and password "([^"]*)" and remember me (checked|unchecked)$/) do |id, password, remember_me|

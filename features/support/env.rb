@@ -1,4 +1,4 @@
-require 'watir-webdriver'
+require 'watir'
 require 'page-object'
 require 'data_magic'
 require 'rspec/expectations'
@@ -19,3 +19,11 @@ AllureCucumber.configure do |config|
   config.output_dir = "allure"
 end
 
+if ENV['HEADLESS']
+  require 'headless'
+  headless = Headless.new
+  headless.start
+  at_exit do
+    headless.destroy
+  end
+end
