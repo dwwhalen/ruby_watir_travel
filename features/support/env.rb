@@ -13,6 +13,10 @@ include Test::Unit::Assertions
 DataMagic.yml_directory = 'data'
 
 
+# making Chrome the default primary browser
+ENV['BROWSER'] = 'chrome' if ENV['BROWSER'].nil? || (ENV['BROWSER'] && ENV['BROWSER'].delete(' ').eql?(''))
+ENV['BROWSER'] = ENV['BROWSER'].downcase.delete(' ')
+
 # include AllureCucumber::DSL
 
 # AllureCucumber.configure do |config|

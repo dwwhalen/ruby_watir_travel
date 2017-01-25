@@ -1,7 +1,7 @@
 
 
 Given(/^I navigate to the Login page$/) do
-  @browser = Watir::Browser.new :chrome
+  @browser = Watir::Browser.new ENV['BROWSER']
   @login_page = LoginPage.new @browser
   @login_page.visit('http://phptravels.net/login/en')
 end
