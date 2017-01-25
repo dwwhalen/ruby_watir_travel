@@ -23,7 +23,7 @@ ENV['BROWSER'] = ENV['BROWSER'].downcase.delete(' ')
 #   config.output_dir = "allure"
 # end
 
-if ENV['HEADLESS']
+if ENV['BROWSER_TYPE'] == 'headless'
   require 'headless'
   headless = Headless.new
   headless.start
