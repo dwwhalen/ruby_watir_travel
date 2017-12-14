@@ -13,7 +13,7 @@ class AccountPage < CommonPage
   end
 
   def user_dropdown
-    @browser.li(:class, 'pull-right width_change')
+    @browser.link(:class, 'dropdown-toggle go-text-right')
   end
 
   def logout_link

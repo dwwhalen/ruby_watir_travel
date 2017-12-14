@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'watir'
 # gem 'data_magic'
 gem 'page-object'
 gem 'cucumber'
@@ -13,3 +12,4 @@ gem 'require_all'
 gem 'test-unit'
 gem 'headless'
 gem 'rake'
+gem 'watir'
